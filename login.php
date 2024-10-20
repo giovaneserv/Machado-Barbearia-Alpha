@@ -1,14 +1,15 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login -  Barber Shop</title>
+    <title>Login -  Machado Barbearia</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contato.css">
 </head>
 <body>
-<div class="img"><a href="quem-somos.html"><img src="imgs/caveira.png" alt=""></a></div>
+<div class="img"><a href="quem-somos.php"><img src="imgs/logo.jpeg" alt=""></a></div>   
     <nav>
         <div id="slogan">
             <h1>Barber Shop</h1>
@@ -21,7 +22,7 @@
             <div class="introducao">
             </div>
 
-            <form class="formulario" method="POST" action="php/cadastro.php">
+            <form class="formulario" method="POST" action="php/login.php">
                 Email:<input type="text" name="email" id="email" placeholder="Email" class="info" required>
 
 
