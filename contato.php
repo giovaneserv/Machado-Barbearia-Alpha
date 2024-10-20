@@ -1,8 +1,6 @@
-<?php
-require_once "php/conecta.php";
-?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -15,8 +13,7 @@ require_once "php/conecta.php";
 </head>
 
 <body>
-    <?= include 'nav.html'; ?>
-
+<?php include 'nav.php'; ?>
     <h1 class="titulo">Cadastre-se</h1>
     <main class="contato">
         <div class="area-do-formulario">
@@ -37,12 +34,9 @@ require_once "php/conecta.php";
                 Confirmar Senha: <input type="password" name="confirmar_senha" id="confirmar-senha" placeholder="Confirmar Senha">
                 <br>
 
-                <div class="data">
+                
                     Data de Nascimento: <br>
-                    Dia: <select class="dia" name="dia" id="dia"></select>
-                    Mês: <select class="mes" name="mes" id="mes"></select>
-                    Ano: <select class="ano" name="ano" id="ano"></select>
-                </div>
+                    <input type="date" name="data_nascimento" class="data_nascimento" id="">
 
                 <div class="area-botao">
                     <input type="submit" value="Cadastre-se" placeholder="enviar" class="btn">
@@ -53,41 +47,6 @@ require_once "php/conecta.php";
                 </div>
             </form>
     </main>
-
-    <script>
-        function prencherData() {
-            var dia = document.getElementById('dia');
-            var mes = document.getElementById('mes');
-            var ano = document.getElementById('ano');
-
-            for (var i = 1; i <= 31; i++) {
-                var option = document.createElement('option');
-                option.text = i;
-                option.value = i;
-                dia.add(option);
-            }
-            var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-            var mesNumber = meses.map(function(elemento, indice) {
-                return indice + 1;
-            });
-            for (i = 0; i < mesNumber.length; i++) {
-                var option = document.createElement('option');
-                option.text = mesNumber[i];
-                option.value = i + 1;
-                mes.add(option);
-            }
-            var anoAtual = new Date().getFullYear();
-            var anofim = 2024
-
-            for (var i = anoAtual; i >= 1904; i--) {
-                var option = document.createElement('option');
-                option.text = i;
-                option.value = i;
-                ano.add(option);
-            }
-        }
-        window.onload = prencherData()
-    </script>
 </body>
 
 </html>
