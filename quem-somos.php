@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -10,8 +11,7 @@
 </head>
 
 <body>
-    <?= include 'nav.html';?>
-
+    <?php include 'nav.php'; ?>
     <h1 class="titulo">QUEM SOMOS</h1>
     <main class="container1">
         <div id="sobre">
